@@ -16,6 +16,8 @@ class Movie {
   double voteAverage;
   int voteCount;
 
+  String? heroId;
+
   Movie({
     required this.adult,
     this.backdropPath,
@@ -41,7 +43,7 @@ class Movie {
   }
 
   get fullBackdropPath {
-    if (this.posterPath != null)
+    if (this.backdropPath != null)
       return 'https://image.tmdb.org/t/p/w500${this.backdropPath}';
 
     return 'https://www.gmt-sales.com/wp-content/uploads/2015/10/no-image-found.jpg';
